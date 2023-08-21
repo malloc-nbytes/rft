@@ -42,7 +42,7 @@ let () =
      let _ = print_endline "No files found" in
      print_endline "Aborting"
   | _ ->
-     let _ = Printf.printf "Found %d files:" (List.length files_to_remove) in
+     let _ = Printf.printf "Found %d files:\n" (List.length files_to_remove) in
      let _ = List.iter (fun f -> Printf.printf "  %s\n" f) files_to_remove in
      let _ = print_endline "Delete these files? [Y/n]" in
      let ans = read_line () in
